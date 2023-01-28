@@ -5,7 +5,7 @@
 
 
 # EcrivAI
-Automated blog writer that uses ChatGPT for topic selection and content generation.
+Automated blog writer that uses ChatGPT for topic selection and content generation. Content is published to [this blog](https://github.com/ecriv-ai/ecrivai) (not ready yet).
 
 ## Phase 1
 <a href="https://github.com/ecriv-ai">
