@@ -4,7 +4,6 @@ based on a topic.
 """
 
 import logging
-from chatgpt_wrapper import ChatGPT
 
 # set up logger
 logger = logging.getLogger(__name__)
@@ -24,7 +23,7 @@ logger.addHandler(handler)
 
 class ContentGenerator:
     def __init__(self, bot=None) -> None:
-        self.bot: bot
+        self.bot=bot
         self.content_body: str = ""
 
     def _revise_with_keywords(self, keywords: list[str]) -> str:
@@ -48,12 +47,8 @@ class ContentGenerator:
     ) -> str:
         """Get initial content body from ChatGPT."""
         logger.info("Generating initial content body...")
-        self._start_new_session()
-
         prompt = f'Write a {word_count} word blog post in {sections} sections on the topic "{topic}"'
-        logger.info(f"Getting initial topics with prompt: {prompt}")
         response = self.bot.ask(prompt)
-
         return response
 
     def get_content_body(

@@ -7,7 +7,6 @@ Some keywords to use while looking for a good topic:
 """
 import logging
 import random
-from chatgpt_wrapper import ChatGPT
 
 # set up logger
 logger = logging.getLogger(__name__)
