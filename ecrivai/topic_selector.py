@@ -30,7 +30,7 @@ class TopicSelector:
         self.topic: str = None
 
     def _get_potential_topics(
-        self, prompt: str = "list 5 random topics to write a blog about"
+        self, prompt: str = "list 5 topics to write a blog about"
     ) -> list[str]:
         """
         Return a list of potential topics to write a blog about. 
@@ -68,5 +68,7 @@ class TopicSelector:
         potential_topics = self._get_potential_topics()
         logger.info("Selecting random topic from list of potential topics...")
         self.topic = random.choice(potential_topics)
+        if isinstance(self.topic, list):
+            self.topic = self.topic[0]
         logger.info(f"Selected topic: {self.topic}")
         return self.topic
