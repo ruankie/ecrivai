@@ -7,7 +7,6 @@ Some keywords to use while looking for a good topic:
 """
 import logging
 import random
-from chatgpt_wrapper import ChatGPT
 
 # set up logger
 logger = logging.getLogger(__name__)
@@ -26,22 +25,20 @@ logger.addHandler(handler)
 
 
 class TopicSelector:
-    def __init__(self) -> None:
+    def __init__(self, bot=None) -> None:
+        self.bot = bot
         self.topic: str = None
 
     def _get_potential_topics(
-        self, prompt: str = "list 5 random topics to write a blog about"
+        self, prompt: str = "list 5 topics to write a blog about"
     ) -> list[str]:
         """
         Return a list of potential topics to write a blog about. 
         Optionally, provide a custom prompt to, for example,
         include specific keywords or sub-topics.
         """
-        logger.info("Connecting to ChatGPT...")
-        bot = ChatGPT()
-
         logger.info(f"Getting initial topics with prompt: {prompt}")
-        response = bot.ask(prompt)
+        response = self.bot.ask(prompt)
 
         logger.info("Cleaning response...")
         try:
@@ -71,5 +68,7 @@ class TopicSelector:
         potential_topics = self._get_potential_topics()
         logger.info("Selecting random topic from list of potential topics...")
         self.topic = random.choice(potential_topics)
+        if isinstance(self.topic, list):
+            self.topic = self.topic[0]
         logger.info(f"Selected topic: {self.topic}")
         return self.topic
