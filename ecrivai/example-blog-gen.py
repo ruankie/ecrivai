@@ -10,11 +10,7 @@ def main():
     # generate content body
     cgen = ContentGenerator()
     body = cgen.get_content_body(
-        topic=topic,
-        word_count=800,
-        sections=4,
-        use_keywords=[],
-        as_markdown=False,
+        topic=topic, word_count=800, sections=4, use_keywords=[], as_markdown=False,
     )
 
     # show content

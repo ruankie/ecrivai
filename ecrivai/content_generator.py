@@ -23,14 +23,9 @@ logger.addHandler(handler)
 
 
 class ContentGenerator:
-    def __init__(self) -> None:
-        self.bot: ChatGPT = None
+    def __init__(self, bot=None) -> None:
+        self.bot: bot
         self.content_body: str = ""
-
-    def _start_new_session(self) -> None:
-        """Start new ChatGPT session."""
-        logger.info("Connecting to ChatGPT...")
-        self.bot = ChatGPT()
 
     def _revise_with_keywords(self, keywords: list[str]) -> str:
         """Revise content body by using the given keywords."""

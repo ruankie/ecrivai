@@ -26,9 +26,9 @@ logger.addHandler(handler)
 
 
 class TopicSelector:
-    def __init__(self) -> None:
+    def __init__(self, bot=None) -> None:
+        self.bot = bot
         self.topic: str = None
-        self.bot: ChatGPT = None
 
     def _get_potential_topics(
         self, prompt: str = "list 5 random topics to write a blog about"
@@ -38,11 +38,8 @@ class TopicSelector:
         Optionally, provide a custom prompt to, for example,
         include specific keywords or sub-topics.
         """
-        logger.info("Connecting to ChatGPT...")
-        bot = ChatGPT()
-
         logger.info(f"Getting initial topics with prompt: {prompt}")
-        response = bot.ask(prompt)
+        response = self.bot.ask(prompt)
 
         logger.info("Cleaning response...")
         try:
