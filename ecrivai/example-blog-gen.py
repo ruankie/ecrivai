@@ -5,6 +5,7 @@ from bot_session import ChatGPTSession
 
 CONTENT_PATH = "../content"
 
+
 def main():
     # set up dir
     abspath = os.path.abspath(__file__)
@@ -21,11 +22,7 @@ def main():
     # generate body
     cgen = ContentGenerator(bot=session.bot)
     body = cgen.get_content_body(
-        topic=topic, 
-        word_count=800, 
-        sections=4, 
-        use_keywords=[], 
-        as_markdown=True,
+        topic=topic, word_count=800, sections=4, use_keywords=[], as_markdown=True,
     )
 
     # show content

@@ -23,7 +23,7 @@ logger.addHandler(handler)
 
 class ContentGenerator:
     def __init__(self, bot=None) -> None:
-        self.bot=bot
+        self.bot = bot
         self.content_body: str = ""
 
     def _revise_with_keywords(self, keywords: list[str]) -> str:
