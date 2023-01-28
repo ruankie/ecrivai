@@ -4,9 +4,8 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-chatgpt = "==2.2212.0"
-requests = "==2.28.2"
-pyreadline3 = "==3.4.1"
+jupyterlab = "*"
+install = "*"
 
 [dev-packages]
 
