@@ -28,6 +28,7 @@ logger.addHandler(handler)
 class TopicSelector:
     def __init__(self) -> None:
         self.topic: str = None
+        self.bot: ChatGPT = None
 
     def _get_potential_topics(
         self, prompt: str = "list 5 random topics to write a blog about"
