@@ -18,6 +18,7 @@ content_prompt = PromptTemplate(
 - Use relevant keywords strategically throughout the blog post to optimize it for search engines and attract more readers. You should also avoid keyword stuffing or using irrelevant or misleading keywords that do not match the content of the blog post.
 - Use a catchy title, a hook sentence, a clear thesis statement, a compelling story or anecdote, a surprising fact or statistic, a relevant question or challenge, a strong conclusion.
 - You should use these components to capture the attention of the reader and convey the main message and purpose of the blog
+- The output format of the entire blog post must be in Markdown. All headings, bullet points, links, etc. must use proper Markdown syntax
 
 Please follow these instructions carefully and write a high-quality and original blog post about: {topic}."""
 )
