@@ -13,5 +13,8 @@ def to_markdown(blog_text: str, out_dir: str = "content/") -> None:
     out_file_name = f"{now_str}.md"
     out_file_path = os.path.join(out_dir, out_file_name)
 
+    if not os.path.exists(out_dir):
+        os.makedirs(out_dir)
+
     with open(out_file_path, "w") as f:
         f.write(blog_text.strip())
