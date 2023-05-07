@@ -3,8 +3,8 @@ import logging
 from dotenv import load_dotenv
 from langchain.llms import OpenAI
 from langchain.chains import LLMChain, SimpleSequentialChain
-from ecrivai.prompt_templates import content_prompt, topic_prompt
-from ecrivai.write import to_markdown
+from prompt_templates import content_prompt, topic_prompt
+from write import to_markdown
 
 
 load_dotenv()
