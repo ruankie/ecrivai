@@ -10,7 +10,7 @@ content_prompt = PromptTemplate(
     input_variables=["topic"],
     template="""Write a blog post about: {topic}. The blog post should have the following characteristics:
 - The style and tone of the blog should be informative. You should write in the first person and use a friendly and engaging voice.
-- The length of the blog post should be around 800 words.
+- The length of the blog post should be around 600 words.
 - The blog must contain these sections: introduction, body, and conclusion.
 - Each section should have a clear and catchy heading that summarizes its main point.
 - Use subheadings, bullet points, lists, quotes, or other elements to break up the text and make it easier to read.
@@ -19,5 +19,5 @@ content_prompt = PromptTemplate(
 - Use a catchy title, a hook sentence, a clear thesis statement, a compelling story or anecdote, a surprising fact or statistic, a relevant question or challenge, a strong conclusion.
 - You should use these components to capture the attention of the reader and convey the main message and purpose of the blog
 - The output format of the entire blog post must be in Markdown. All headings, bullet points, links, etc. must use proper Markdown syntax
-Please follow these instructions carefully and write a high-quality and original blog post about: {topic}."""
+Please follow these instructions carefully and write a high-quality and original blog post about: {topic}. Start immediately with the content of the blog post:"""
 )
