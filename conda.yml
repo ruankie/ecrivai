@@ -1,0 +1,12 @@
+name: ecrivai
+dependencies:
+  - python=3.9
+  - pip
+  - pip:
+    - jupyterlab==3.4.*
+    - langchain==0.0.153
+    - openai==0.27.*
+    - python-dotenv==1.0.*
+    - black==23.3.*
+    - pylint==2.17.*
+    - -e .
