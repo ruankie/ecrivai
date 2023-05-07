@@ -47,7 +47,7 @@ def get_blog_chain():
 if __name__ == "__main__":
     logging.info("Parsing CLI args")
     parser = argparse.ArgumentParser(description="A create a blog post as a Markdown file with ecrivai")
-    parser.add_argument("--out-dir", type=str, default="../content", help="The path to the output directory")
+    parser.add_argument("--out-dir", type=str, default="./content", help="The path to the output directory")
     args = parser.parse_args()
     
     chain = get_blog_chain()
