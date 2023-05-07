@@ -26,6 +26,7 @@ The blog post should have the following characteristics:
 - Use a catchy title, a hook sentence, a clear thesis statement, a compelling story or anecdote, a surprising fact or statistic, a relevant question or challenge, a strong conclusion.
 - You should use these components to capture the attention of the reader and convey the main message and purpose of the blog
 - The output format of the entire blog post must be in Markdown. All headings, bullet points, links, etc. must use proper Markdown syntax
+- Start with the title of the blog as a first level Markdown heading
 Please follow these instructions carefully and write a high-quality and original blog post about: {topic}.
 Start immediately with the content of the blog post:"""
 )
