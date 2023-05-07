@@ -23,3 +23,17 @@ Automated blog writer that uses LangChain and GPT type LLMs for topic selection 
     conda activate ecrivai
     ```
 
+### CLI
+
+> Note: Remember to activate your `ecrivai` conda environment before doing this (see above)
+
+You can quickly generate a new original blog by running:
+
+```
+python ecrivai/add_blog.py
+```
+
+This will add a blog to a Markdown file in a directory called `content/`. You can also specify your own output directory by running this instead:
+```
+python ecrivai/add_blog.py --out-dir path/to/dir
+```
