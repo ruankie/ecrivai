@@ -1,4 +1,4 @@
-name: langchain
+name: ecrivai
 dependencies:
   - python=3.9
   - pip

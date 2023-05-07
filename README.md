@@ -20,6 +20,6 @@ Automated blog writer that uses LangChain and GPT type LLMs for topic selection 
 2. Set up and activate conda environment
     ```bash
     conda env create -f conda.yml
-    conda activate langchain
+    conda activate ecrivai
     ```
 
