@@ -5,10 +5,7 @@
 
 
 # 🦜🔗✏️EcrivAI
-Automated blog writer that uses LangChain and GPT type LLMs for topic selection and content generation. Content is published to [this blog](https://github.com/runakie/ecrivai) (not ready yet).
-
-> 🏗️ Under construction...
-
+EcrivAI is an automated blog writer that uses LangChain and GPT type LLMs for topic selection and content generation. The content is published to [this blog](https://ruankie.github.io/ecrivai-blog-hugo/)
 
 ## Usage
 ### Prerequisites
