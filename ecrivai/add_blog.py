@@ -1,10 +1,11 @@
+import os
 import argparse
 import logging
 from dotenv import load_dotenv
 from langchain.llms import OpenAI
 from langchain.chains import LLMChain, SimpleSequentialChain
 from prompt_templates import content_prompt, topic_prompt
-from write import to_markdown
+from write import to_markdown, md2hugo
 
 
 load_dotenv()
@@ -53,8 +54,13 @@ if __name__ == "__main__":
     chain = get_blog_chain()
     logging.info("Generating topic and blog (can take some time)...")
     blog_text = chain.run("")
-    logging.info("Blog finished")
+    logging.info("Blog content finished")
 
     out_dir = args.out_dir
     logging.info(f"Writing blog to Markdown file at: {out_dir}")
-    to_markdown(blog_text, out_dir=out_dir)
+    md_file_name = to_markdown(blog_text, out_dir=out_dir)
+    logging.info(f"Formatting file header for Hugo")
+    blof_file_path = os.path.join(out_dir, md_file_name)
+    md2hugo(blof_file_path, blof_file_path)
+    logging.info(f"Done")
+
