@@ -1,5 +1,8 @@
 from langchain.prompts import PromptTemplate
 
+topic_prompt = """Give me a single topic to write an informative, engaging blog about.
+This blog topic must be relevant and appealing to many people so that many readers will want to read about it.
+Only give me the topic name after this prompt and nothing else. The topic is:"""
 
 keyword_prompt = PromptTemplate(
         input_variables=["topic"],
@@ -8,7 +11,8 @@ keyword_prompt = PromptTemplate(
 
 content_prompt = PromptTemplate(
     input_variables=["topic"],
-    template="""Write a blog post about: {topic}. The blog post should have the following characteristics:
+    template="""Write a blog post about: {topic}. 
+The blog post should have the following characteristics:
 - The style and tone of the blog should be informative. You should write in the first person and use a friendly and engaging voice.
 - The length of the blog post should be around 600 words.
 - The blog must contain these sections: introduction, body, and conclusion.
@@ -19,5 +23,6 @@ content_prompt = PromptTemplate(
 - Use a catchy title, a hook sentence, a clear thesis statement, a compelling story or anecdote, a surprising fact or statistic, a relevant question or challenge, a strong conclusion.
 - You should use these components to capture the attention of the reader and convey the main message and purpose of the blog
 - The output format of the entire blog post must be in Markdown. All headings, bullet points, links, etc. must use proper Markdown syntax
-Please follow these instructions carefully and write a high-quality and original blog post about: {topic}. Start immediately with the content of the blog post:"""
+Please follow these instructions carefully and write a high-quality and original blog post about: {topic}.
+Start immediately with the content of the blog post:"""
 )
