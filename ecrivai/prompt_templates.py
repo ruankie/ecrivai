@@ -1,8 +1,8 @@
 from langchain.prompts import PromptTemplate
 
 topic_prompt = PromptTemplate(
-        input_variables=[],
-        template="""Give me a single topic to write an informative, engaging blog about.
+        input_variables=["dummy"],
+        template="""{dummy}Give me a single topic to write an informative, engaging blog about.
 This blog topic must be relevant and appealing to many people so that many readers will want to read about it.
 Only give me the topic name after this prompt and nothing else. The topic is:"""
     )
