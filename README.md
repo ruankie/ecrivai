@@ -1,3 +1,5 @@
+[![blog-link](https://img.shields.io/badge/ecrivai-blog-blue)](https://ruankie.github.io/ecrivai-blog-hugo/)
+[![auto-publish](https://github.com/ruankie/ecrivai-blog-hugo/actions/workflows/sheduled-publish.yml/badge.svg)](https://github.com/ruankie/ecrivai-blog-hugo/actions/workflows/sheduled-publish.yml)
 [![GitHub stars](https://img.shields.io/github/stars/ruankie/ecrivai)](https://github.com/ruankie/ecrivai/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/ruankie/ecrivai)](https://github.com/ruankie/ecrivai/network)
 [![GitHub contributors](https://img.shields.io/github/contributors/ruankie/ecrivai)](https://github.com/ruankie/ecrivai/graphs/contributors)
