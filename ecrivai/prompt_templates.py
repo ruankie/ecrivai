@@ -2,9 +2,10 @@ from langchain.prompts import PromptTemplate
 
 topic_prompt = PromptTemplate(
         input_variables=["dummy"],
-        template="""{dummy}Give me a single topic to write an informative, engaging blog about.
+        template="""{dummy}Give me a single, specific topic to write an informative, engaging blog about.
 This blog topic must be relevant and appealing to many people so that many readers will want to read about it.
-Only give me the topic name after this prompt and nothing else. The topic is:"""
+The specific topic can be from a wide range of broader topics like physics, science, engineering, lifestyle, health, learning, teaching, history, technology, cryptocurrency, art, music, sport, business, economics, travel, entertainment, gaming, food, etc.
+Only give me the specific topic name after this prompt and nothing else. The topic is:"""
     )
 
 keyword_prompt = PromptTemplate(
