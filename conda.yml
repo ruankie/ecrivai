@@ -1,6 +1,6 @@
 name: ecrivai
 dependencies:
-  - python=3.9.16
+  - python=3.10
   - pip
   - pip:
     - jupyterlab==3.4.8
