@@ -22,6 +22,15 @@ EcrivAI is an automated blog writer that uses LangChain and GPT type LLMs for to
     conda activate ecrivai
     ```
 
+> If you are having trouble setting your environment variables with the `.env` file or you want to manually add them instead of using a `.env` file, you can set your environment variable in your `ecrivai` conda environment like this:
+>```shell
+> # set api key env var
+> conda env config vars set OPENAI_API_KEY="your-api-key-here"
+> # re-activate env
+> conda activate base
+> conda activate ecrivai
+>```
+
 ### CLI
 
 > Note: Remember to activate your `ecrivai` conda environment before doing this (see above)
