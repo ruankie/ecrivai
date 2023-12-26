@@ -2,7 +2,7 @@ import os
 import argparse
 import logging
 from dotenv import load_dotenv
-from langchain.llms import OpenAI
+from langchain_google_genai import GoogleGenerativeAI
 from langchain.chains import LLMChain, SimpleSequentialChain
 from prompt_templates import content_prompt, topic_prompt
 from write import to_markdown, md2hugo
@@ -16,23 +16,22 @@ def get_blog_chain():
     # set up some parameters of the LLM
     content_llm_kwargs = {
         "temperature": 0.7,
-        "model_name": "text-davinci-003",
-        "max_tokens": 1500 # ~ 1125 words
+        "model": "gemini-pro",
+        "max_output_tokens": 2048 # ~ 1500 words (max for gemini-pro)
     }
 
-    brief_llm_kwargs = {
-        "temperature": 0.7,
-        "model_name": "text-davinci-003",
-        "max_tokens": 50 # ~ 38words
+    topic_llm_kwargs = {
+        "temperature": 0.9,
+        "model": "gemini-pro",
+        "max_output_tokens": 50 # ~ 38words
     }
 
     # create LLMs with kwargs specified above
-    content_llm = OpenAI(**content_llm_kwargs)
-    brief_llm = OpenAI(**brief_llm_kwargs)
+    content_llm = GoogleGenerativeAI(**content_llm_kwargs)
+    topic_llm = GoogleGenerativeAI(**topic_llm_kwargs)
 
     # chain it all together
-    logging.info("Chaining together topic and content generators")
-    topic_chain = LLMChain(llm=brief_llm, prompt=topic_prompt)
+    topic_chain = LLMChain(llm=topic_llm, prompt=topic_prompt)
     content_chain = LLMChain(llm=content_llm, prompt=content_prompt)
 
     chain = SimpleSequentialChain(

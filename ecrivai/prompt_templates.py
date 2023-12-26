@@ -18,7 +18,7 @@ content_prompt = PromptTemplate(
     template="""Write a blog post about: {topic}. 
 The blog post should have the following characteristics:
 - The style and tone of the blog should be informative. You should write in the first person and use a friendly and engaging voice.
-- The length of the blog post should be roughly 600 words.
+- The length of the blog post should be roughly 1300 words.
 - The blog must contain these sections: introduction, body, and conclusion.
 - Each section should have a clear and catchy heading that summarizes its main point.
 - Use subheadings, bullet points, lists, quotes, or other elements to break up the text and make it easier to read.

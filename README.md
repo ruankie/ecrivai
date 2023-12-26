@@ -24,7 +24,9 @@ EcrivAI is an automated blog writer that uses LangChain and GPT type LLMs for to
 ## Usage
 ### Prerequisites
 1. 🐍 You will need a working install of [`conda`](https://www.anaconda.com/download#downloads).
-2. 🔑 You will need an API key from OpenAI. You can create one for free [here](https://platform.openai.com/account/api-keys).
+2. 🔑 You will need an API key from OpenAI or Google. You can create one for free here:
+    - [OpenIA](https://platform.openai.com/account/api-keys) - to use models like GPT4
+    - [Google](https://ai.google.dev/) - to use models like Gemini
 
 ### Dev Environment Setup
 1. Set up your API keys in a file called `.env` (see `.env.example` for an example)
@@ -38,6 +40,7 @@ EcrivAI is an automated blog writer that uses LangChain and GPT type LLMs for to
 >```shell
 > # set api key env var
 > conda env config vars set OPENAI_API_KEY="your-api-key-here"
+> conda env config vars set GOOGLE_API_KEY="your-api-key-here"
 > # re-activate env
 > conda activate base
 > conda activate ecrivai
