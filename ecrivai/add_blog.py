@@ -17,7 +17,7 @@ def get_blog_chain():
     content_llm_kwargs = {
         "temperature": 0.7,
         "model": "gemini-pro",
-        "max_output_tokens": 1500 # ~ 1125 words
+        "max_output_tokens": 2048 # ~ 1500 words (max for gemini-pro)
     }
 
     topic_llm_kwargs = {
