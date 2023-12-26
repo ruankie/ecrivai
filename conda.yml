@@ -1,4 +1,4 @@
-name: ecrivai-gemini
+name: ecrivai
 dependencies:
   - python=3.12
   - pip
