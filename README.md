@@ -7,7 +7,7 @@
 
 
 # 🦜🔗✏️EcrivAI
-EcrivAI is an automated blog writer that uses LangChain and GPT type LLMs for topic selection and content generation. The content is published to [this blog](https://ruankie.github.io/ecrivai-blog-hugo/)
+EcrivAI is a fully automated AI blog writer that uses LangChain and GPT type LLMs for topic selection and content generation. The content is published to [this blog](https://ruankie.github.io/ecrivai-blog-hugo/)
 
 <details closed><summary>Star History</summary>
     
