@@ -4,6 +4,7 @@ dependencies:
   - pip
   - pip:
     - jupyterlab==4.0.9
+    - langchain-core==0.1.4
     - langchain-google-genai==0.0.5
     - langchain==0.0.352
     - python-dotenv==1.0.0
